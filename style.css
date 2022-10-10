@@ -1,0 +1,123 @@
+:root {
+  --litegrey: #ebeaea;
+  --blue: #1d7af5;
+  --darkblue: #004aad;
+  --liteblue: #38b6ff;
+  --green: #03989e;
+  --grey: #a6a6a6;
+  --darkgrey: #737373;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--litegrey);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: bold;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header,
+nav,
+article,
+section,
+aside,
+footer {
+  padding: 0.5rem;
+}
+
+header {
+  background-color: var(--blue);
+  margin: 1rem 1rem 0.5rem 1rem;
+}
+
+nav:not(.page-body nav) {
+  background-color: var(--darkblue);
+  margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.page-body,
+span {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-body {
+  margin: 1rem 1rem 0.5rem 1rem;
+  display: flex;
+}
+
+.page-body nav {
+  width: 20%;
+  background-color: var(--liteblue);
+  margin-right: 0.5rem;
+}
+
+.page-body div,
+main div {
+  background-color: var(--green);
+}
+
+main {
+  background-color: var(--green);
+  width: 52%;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+section {
+  background-color: var(--litegrey);
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+section h1:not(article h1, aside h1) {
+  color: black;
+}
+
+article {
+  background-color: var(--darkgrey);
+  margin-bottom: 0.5rem;
+}
+
+aside {
+  background-color: var(--grey);
+}
+
+.aside-r {
+  width: 20%;
+}
+
+span div:first-of-type {
+  width: 60%;
+  margin-right: 0.5rem;
+}
+
+span div:last-child {
+  width: 40%;
+}
+
+footer {
+  background-color: var(--blue);
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .page-body {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  main,
+  .page-body nav,
+  .aside-r {
+    width: 90%;
+    margin: 0 auto !important;
+  }
+}
